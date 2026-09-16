@@ -29,7 +29,7 @@ FROM customers
 SELECT DISTINCT state
 FROM customers
 '''
-# remove the duplicates(重复项)
+# remove the duplicates
 ;
 
 4.HW
