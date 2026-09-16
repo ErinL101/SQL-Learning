@@ -1,4 +1,4 @@
-1
+1.
 ```
 USE sql_store; #(select database)
 
@@ -10,7 +10,7 @@ ORDER BY first_name
 
 clause: FROM,WHERE,ORDER BY are optional; cant change the order
 
-2
+2.
 ```
 SELECT
     first_name,
@@ -22,7 +22,7 @@ FROM customers
 * -> return all columns / specify the column we want to return
       / use a arithmetic expression / use an alias for a column
 
-3
+3.
 ```
 SELECT DISTINCT state
 FROM customers
