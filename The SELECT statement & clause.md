@@ -19,7 +19,7 @@ SELECT
     (points + 10) * 100 AS 'discount_factor'
 FROM customers
 ```
-’*‘ -> return all columns / specify the column we want to return
+`*`-> return all columns / specify the column we want to return
       / use a arithmetic expression / use an alias for a column
 
 3.
