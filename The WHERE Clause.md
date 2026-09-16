@@ -19,18 +19,21 @@ WHERE state != 'VA'
 ```
 
 3.
-string==texture data = characters --> need to enclose 双引号quote or 单引号
+string --> need to enclosed quotes
 ```
 SELECT *
 FROM customers
 WHERE birth_date > '1990-01-01'
 ```
+ 4.
+use quotes to present date values
+standard date format:  'yyyy-mm-dd'
 
-4.
-use quote to present date values
-standard format of data 'yyyy-mm-dd'
+5.HW
 ```
 SELECT *
 FROM orders
 WHERE order_date >= '2019-01-01'
 ```
+
+
