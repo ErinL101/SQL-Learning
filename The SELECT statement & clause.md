@@ -30,7 +30,7 @@ FROM customers
 remove the duplicates
 
 
-4.HW
+4.Ex
 ```
 SELECT
     name,
