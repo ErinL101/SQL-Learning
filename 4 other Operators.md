@@ -39,7 +39,7 @@ WHERE last_name LIKE '%b%'
 ```
 WHERE last_name LIKE 'b____y'
 ```
-`%`: indicate any numbe of characters
+`%`: indicate any numbe of characters    
 `_`: indicate any a single characters  
 
   *EX
