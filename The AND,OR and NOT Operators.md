@@ -1,7 +1,7 @@
 combine multiple search conditions when filtering data
 
 
-1.order of operators
+1.order of operators  
 `AND` (first)  
 `OR`  
 can use parentheses to change orders
