@@ -29,7 +29,7 @@ WHERE birth_date > '1990-01-01'
 use quotes to present date values
 standard date format:  'yyyy-mm-dd'
 
-5.HW
+5.Ex
 ```
 SELECT *
 FROM orders
