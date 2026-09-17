@@ -20,3 +20,6 @@ born either after 1990 or ( have more than 1000 point AND live in VA )
 equivalent to   
 ` WHERE birth_date <= '1990-01-01' AND points <= 1000 `
 
+3.Ex  
+
+
