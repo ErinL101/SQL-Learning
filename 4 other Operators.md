@@ -55,7 +55,24 @@ FROM customers
 WHERE phone NOT LIKE '%9'
 ```
 
-4.`REGEXP`  
+4.`REGEXP`    
+4.1
+REGEXP = Regular Expression
+powerful for searching strings  
 
+```
+WHERE last_name REGEXP 'field'
+```
+equivalent to `WHERE last_name LIKE '%field%'`
 
+4.2
+`^`: present the beginning of the a string
+`$`: present the end of a string
+`|`: present multiple search patterns 
+'[]'
+
+`WHERE last_name REGEXP '^field'` end with field  
+`WHERE last_name REGEXP 'field$|mac|rose'`
+
+`WHERE  last_name REGEXP '[gi]e'` before the letter 'e' either have a 'g' or a 'i'
 
