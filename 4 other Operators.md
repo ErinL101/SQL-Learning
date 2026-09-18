@@ -96,8 +96,8 @@ SELECT *
 FROM customers
 WHERE last_name REGEXP 'B[RU]'
 ```
-5.`IS NULL`
-`WHERE phone IS NULL`
+5.`IS NULL`    
+`WHERE phone IS NULL`  
 `WHERE phone IS NOT NULL`
 
 
