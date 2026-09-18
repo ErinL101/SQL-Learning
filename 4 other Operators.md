@@ -68,11 +68,35 @@ equivalent to `WHERE last_name LIKE '%field%'`
 4.2
 `^`: present the beginning of the a string
 `$`: present the end of a string
-`|`: present multiple search patterns 
-'[]'
+`|`: present logical OR (multiple search patterns)  
+`[]`:match any characters list in brackets
+`[x-x]`:present a range
 
 `WHERE last_name REGEXP '^field'` end with field  
 `WHERE last_name REGEXP 'field$|mac|rose'`
-
 `WHERE  last_name REGEXP '[gi]e'` before the letter 'e' either have a 'g' or a 'i'
+`WHERE  last_name REGEXP 'e[a-h]'` supply a range of characters-have any characters from a to h after 'e' 
+
+*Ex
+! use | to replace or
+```
+SELECT *
+FROM customers
+WHERE first_name REGEXP 'ELKA|AMBUR'
+;
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'EY$|ON$'
+;
+SELECT *
+FROM customers
+WHERE last_name REGEXP '^MY|SE'
+;
+SELECT *
+FROM customers
+WHERE last_name REGEXP 'B[RU]'
+```
+
+
+
 
