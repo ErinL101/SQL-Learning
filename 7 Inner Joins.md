@@ -1,3 +1,4 @@
+1. Inner Joins
 combine the columns in different table
 
 `INNER JOIN` = `JOIN` ( INNER is optional)
@@ -46,3 +47,12 @@ JOIN products p
 	ON oi.product_id = p.product_id
 ```
 oi.unit_price is different to p.unit_price in this case
+
+2. Join Across Databases
+USE sql_store
+;
+SELECT *
+FROM order_items oi
+JOIN sql_inventory.products p
+	ON oi.product_id = p.product_id
+only have to prefix the table that are not at current database
