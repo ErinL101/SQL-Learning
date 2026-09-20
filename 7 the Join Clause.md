@@ -163,4 +163,46 @@ LEFT JOIN order_items oi
 	ON p.product_id = oi.product_id
 ```
 
+8.Outer Join Between Multiple Tables  
+Best avoid Right JOIN, only use LEFT JOIN  
+```
+SELECT 
+	c.customer_id, c.first_name,
+	o.order_id,
+	sh.name AS shipper
+FROM customers c
+LEFT JOIN orders o
+	ON c.customer_id = o.customer_id  
+LEFT JOIN shippers sh  
+	ON o.shipper_id = sh.shipper_id  
+ORDER BY c.customer_id
+```
+*Ex
+```
+SELECT 
+	o.order_date, o.order_id,
+    c.first_name AS customer,
+    sh.name AS shipper,
+    os.name AS status
+FROM orders o
+LEFT JOIN customers c
+	ON o.customer_id = c.customer_id
+LEFT JOIN shippers sh
+	ON o.shipper_id = sh.shipper_id  
+LEFT JOIN order_statuses os
+	ON o.status = os.order_status_id
+```
+
+9.Self Outer Joins  
+```
+USE sql_hr
+;
+SELECT e.employee_id, e.first_name,
+	   m.first_name as manager
+FROM employees e
+LEFT JOIN employees m
+	 ON e.reports_to = m.employee_id
+```
+
+
    
