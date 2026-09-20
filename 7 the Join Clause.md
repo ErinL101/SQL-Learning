@@ -113,6 +113,7 @@ JOIN order_item_notes oin
 ```
 
 6. Implicit Join Syntax
+
 better to use Explicit Join Syntax --> use JOIN
 ( Not recommended because if you forget the WHERE condition, it results in a cross join
   — every row in table1 is combined with every row in table2. )
