@@ -101,5 +101,32 @@ JOIN payment_methods pm
 	ON p.payment_method = pm.payment_method_id
 ```
 
+5. Compound Join Condition
+use a combination of values from 2 columns to uniquely identify 1 record
+composite primary key (contains more than 1 column)
+```
+SELECT *
+FROM order_items oi
+JOIN order_item_notes oin
+	ON oi.order_id = oin.order_id
+    AND oi.product_id = oin.product_id
+```
 
+6. Implicit Join Syntax
+better to use Explicit Join Syntax --> use JOIN
+( Not recommended because if you forget the WHERE condition, it results in a cross join
+  — every row in table1 is combined with every row in table2. )
+```
+SELECT *
+FROM orders o, customers c
+WHERE o.customers_id = c.customer_id
+```
+=
+```
+SELECT *
+FROM orders o
+JOIN customers c 
+	ON o.customer_id = c.customer_id
+```
 
+7.Outer Joins
