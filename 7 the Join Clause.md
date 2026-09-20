@@ -122,7 +122,7 @@ SELECT *
 FROM orders o, customers c
 WHERE o.customers_id = c.customer_id
 ```
-=
+  =
 ```
 SELECT *
 FROM orders o
@@ -131,3 +131,36 @@ JOIN customers c
 ```
 
 7.Outer Joins
+```
+SELECT 
+	c.customer_id, c.first_name,
+    o.order_id
+FROM customers c
+JOIN orders o 
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id
+```
+can't see the result of the customers who don't have order  
+--> use outer Joins (Inner Joins and Outer Joins)  
+1) when use LEFTJOIN:
+   `LEFT JOIN orders o `
+   every record in left table (c, the first) will be returned, whether the condition is true or not
+2) when use RIGHTJOIN:
+   `RIGHT JOIN orders o`
+   every record in right table (o) will be returned, whether the condition is true or not
+
+when use JOIN = INNER JOIN
+when use LEFT JOIN = LEFT OUTER JOIN  
+		 RIGHT JOIN = RIGHT OUTER JOIN  
+
+*Ex  
+```
+SELECT 
+	p.product_id, p.name, 
+    oi.quantity  
+FROM products p 
+LEFT JOIN order_items oi
+	ON p.product_id = oi.product_id
+```
+
+   
