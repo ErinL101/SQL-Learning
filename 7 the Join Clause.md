@@ -57,7 +57,7 @@ FROM order_items oi
 JOIN sql_inventory.products p
 	ON oi.product_id = p.product_id
 ```
-only have to prefix the table that are not at current database
+only have to prefix the table that are not at current database  
 
 3.Self Joins  
 ```
