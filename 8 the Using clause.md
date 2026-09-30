@@ -24,7 +24,7 @@ JOIN order_item_notes oin
     USING (order_id, product_id)
 ```
 
-* Ex
+*Ex
 ```
 USE sql_invoicing;
 SELECT p.date,
