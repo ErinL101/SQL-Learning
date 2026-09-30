@@ -1,4 +1,4 @@
-1 NATURAL JOINS 
+1 NATURAL JOIN   
 dataset engine will join based on common columns (columns with the same name)  
 ```
 SELECT *
@@ -8,7 +8,7 @@ NATURAL JOIN customers s
 easy to code but somewhat dangerous - can produce unexpexted results  
 
 
-2 Cross Joins
+2 CROSS JOIN  
 combine every records from the first table and every from second table  
 
 * explicit syntax:
